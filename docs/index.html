@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Intercity is a webbased hosting management dashboard">
+  <meta name="keywords" content="web apps, hosting, dashboard, control panel, heroku, dokku, on-premise, ruby on rails">
+  <meta name="author" content="Firmhouse B.V.">
+
+  
+
+  <title>Intercity: Hosting management panel</title>
+
+  <link href="/css/toolkit-minimal.css" rel="stylesheet">
+  <link href="/css/intercity-io.css" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/toolkit.js"></script>
+  <script src="/js/mixpanel.js"></script>
+
+  
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '306595803031459');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=306595803031459&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
+  
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <span><img src="/images/logo.svg" width="30"> Intercity</span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="/">Home</a>
+        </li>
+        <li  >
+          <a href="/tour">Tour</a>
+        </li>
+        <li >
+          <a href="/docs">Docs</a>
+        </li>
+        <li   >
+          <a href="/support">Pricing</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="block text-center p-t-md p-b-0">
+  <div class="text-center">
+    <img src="/images/logo.svg" width="100">
+  </div>
+  <h1 class="block-title">Intercity</h1>
+  <h3>Get your apps up and running in no time.</h3>
+  <h4>A server management dashboard for hosting apps.</h4>
+  <p><a id="call-to-action" href="/docs" class="btn btn-pill btn-lg btn-primary m-t">Install right now</a><br>
+  <a id="call-to-action"  href="/tour" class="btn btn-pill btn-lg btn-success m-t">See how Intercity works</a><br>
+  <a id="call-to-action"  href="/docs/install-server.html" class="btn btn-pill btn-default btn-lg m-t">Read the getting started guide</a></p>
+</div>
+<div class="block text-center p-t-md">
+  <div class="container">
+    <img src="/images/preview@2x.png" width="1024" class="img-responsive">
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  mixpanel.track_links(
+    "#call-to-action",
+    "Clicked Call to action",
+    function(element) {
+      return { 'cta name': $(element).html() }
+    }
+  )
+  mixpanel.track("Viewed Homepage")
+</script>
+
+
+<script>
+  mixpanel.track("page viewed", {
+    'page name' : document.title,
+    'url' : window.location.pathname
+  })
+</script>
+
+
+<!-- Google Code for Conversations started Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  goog_snippet_vars = function() {
+    var w = window;
+    w.google_conversion_id = 1055733136;
+    w.google_conversion_label = "wq85CIbdh2oQkOu09wM";
+    w.google_remarketing_only = false;
+  }
+  // DO NOT CHANGE THE CODE BELOW.
+  goog_report_conversion = function(url) {
+    goog_snippet_vars();
+    window.google_conversion_format = "3";
+    var opt = new Object();
+    opt.onload_callback = function() {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  }
+  var conv_handler = window['google_trackConversion'];
+  if (typeof(conv_handler) == 'function') {
+    conv_handler(opt);
+  }
+}
+/* ]]> */
+</script>
+<script type="text/javascript"
+  src="//www.googleadservices.com/pagead/conversion_async.js">
+</script>
+
+
+</body>
+</html>
